@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/diverse-solar-family.jpg";
+import heroImage from "@/assets/hero-solar-borehole.jpg";
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Professional African family standing proudly next to their modern home with solar panels"
+          alt="Professional solar panel installation and borehole drilling services in Kenya"
           className="w-full h-full object-cover animate-scale-up"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
