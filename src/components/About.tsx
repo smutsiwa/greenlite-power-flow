@@ -50,11 +50,11 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-foreground mb-4 animate-bounce-in">
             About Greenlite Solar & Borehole
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-in">
             For over 25 years, we've been Kenya's trusted partner in sustainable energy and water solutions, 
             helping families and businesses achieve energy independence and reliable water access.
           </p>
@@ -63,8 +63,9 @@ const About = () => {
         {/* Stats Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
-            <Card key={index} className="text-center p-6 shadow-card hover:shadow-glow transition-all duration-300">
-              <div className="flex justify-center mb-4">
+            <Card key={index} className="text-center p-6 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 animate-scale-up"
+              style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="flex justify-center mb-4 hover:animate-bounce">
                 {stat.icon}
               </div>
               <div className="text-3xl font-bold text-foreground mb-2">{stat.number}</div>
@@ -74,7 +75,7 @@ const About = () => {
         </div>
 
         {/* Company Story */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 animate-fade-in">
           <div>
             <h3 className="text-3xl font-bold mb-6">Our Story</h3>
             <div className="space-y-4 text-muted-foreground">
@@ -130,7 +131,8 @@ const About = () => {
           <h3 className="text-3xl font-bold text-center mb-12">Meet Our Expert Team</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="text-center p-6 shadow-card hover:shadow-glow transition-all duration-300">
+              <Card key={index} className="text-center p-6 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in"
+                style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="w-24 h-24 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-12 w-12 text-white" />
                 </div>

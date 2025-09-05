@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sun, Droplets, Zap, Shield, Wrench, Users } from "lucide-react";
-import solarImage from "@/assets/solar-installation.jpg";
+import solarImage from "@/assets/diverse-installation-team.jpg";
 import boreholeImage from "@/assets/borehole-service.jpg";
 
 const Services = () => {
@@ -48,11 +48,11 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-foreground mb-4 animate-bounce-in">
             Our Professional Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-in">
             Comprehensive solutions for your energy and water needs, delivered by experienced professionals
           </p>
         </div>
@@ -60,12 +60,13 @@ const Services = () => {
         {/* Main Services */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {services.map((service, index) => (
-            <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-300">
+            <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 animate-scale-up"
+              style={{ animationDelay: `${index * 0.2}s` }}>
               <div className="relative h-64">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
@@ -96,8 +97,9 @@ const Services = () => {
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="text-center p-6 border-none shadow-card hover:shadow-glow transition-all duration-300">
-              <div className="flex justify-center mb-4">
+            <Card key={index} className="text-center p-6 border-none shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="flex justify-center mb-4 hover:animate-bounce">
                 {benefit.icon}
               </div>
               <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>

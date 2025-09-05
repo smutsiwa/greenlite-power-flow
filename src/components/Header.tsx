@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Droplets } from "lucide-react";
+import logoImage from "@/assets/greenlite-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,12 +13,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center space-x-1">
-              <Sun className="h-6 w-6 text-primary" />
-              <Droplets className="h-6 w-6 text-secondary" />
-            </div>
-            <span className="text-xl font-bold text-foreground">
+          <div className="flex items-center space-x-3">
+            <img 
+              src={logoImage} 
+              alt="Greenlite Solar and Boreholes Logo" 
+              className="h-10 w-auto hover:scale-110 transition-transform duration-300"
+            />
+            <span className="text-xl font-bold text-foreground hidden sm:block">
               Greenlite Solar & Borehole
             </span>
           </div>
